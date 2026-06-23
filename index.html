@@ -13,17 +13,17 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --petrol:    #1a5276;
-      --petrol-dk: #154360;
-      --petrol-lt: #2e86c1;
-      --text:      #1c1c1c;
-      --text-sec:  #4a4a4a;
-      --text-muted:#7a7a7a;
-      --bg:        #f8f9fb;
+      --petrol:    #2a2a2a;
+      --petrol-dk: #111111;
+      --petrol-lt: #555555;
+      --text:      #1a1a1a;
+      --text-sec:  #444444;
+      --text-muted:#888888;
+      --bg:        #f0f0f0;
       --bg-alt:    #ffffff;
-      --border:    #d8dde6;
-      --accent:    #c0392b;
-      --radius:    6px;
+      --border:    #c0c0c0;
+      --accent:    #333333;
+      --radius:    0px;
       --nav-h:     64px;
     }
 
@@ -104,11 +104,14 @@
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--petrol-lt);
-      background: #ebf5fb;
-      border: 1px solid #aed6f1;
+      color: #333333;
+      background: #e0ddd5;
+      border-top:  1px solid #ffffff;
+      border-left: 1px solid #ffffff;
+      border-right:  1px solid #808080;
+      border-bottom: 1px solid #808080;
       padding: 0.25rem 0.7rem;
-      border-radius: 3px;
+      border-radius: 0;
       margin-bottom: 1.2rem;
     }
 
@@ -140,30 +143,49 @@
       margin-top: 2rem;
     }
 
+    /* ─── Botões Win2000 ─── */
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      padding: 0.55rem 1.1rem;
-      border-radius: var(--radius);
+      padding: 0.4rem 1rem;
+      border-radius: 0;
       font-size: 0.82rem;
       font-weight: 500;
-      transition: background .2s, color .2s;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      user-select: none;
+      text-decoration: none !important;
+      /* raised bevel: branco no topo/esq, cinza escuro em baixo/dir */
+      border-top:    2px solid #ffffff;
+      border-left:   2px solid #ffffff;
+      border-right:  2px solid #404040;
+      border-bottom: 2px solid #404040;
+      box-shadow: 1px 1px 0 #808080 inset, -1px -1px 0 #dfdfdf inset;
+      transition: none;
+    }
+
+    .btn:active {
+      /* pressed bevel: inverte */
+      border-top:    2px solid #404040;
+      border-left:   2px solid #404040;
+      border-right:  2px solid #ffffff;
+      border-bottom: 2px solid #ffffff;
+      box-shadow: 1px 1px 0 #dfdfdf inset, -1px -1px 0 #808080 inset;
+      padding: 0.45rem 0.95rem 0.35rem 1.05rem;
     }
 
     .btn-primary {
-      background: var(--petrol);
-      color: #fff;
-      border: 1px solid var(--petrol);
+      background: #d4d0c8;
+      color: #000000;
     }
-    .btn-primary:hover { background: var(--petrol-dk); color: #fff; text-decoration: none; }
+    .btn-primary:hover { background: #e0ddd5; color: #000; text-decoration: none; }
 
     .btn-outline {
-      background: transparent;
-      color: var(--petrol);
-      border: 1px solid var(--petrol);
+      background: #d4d0c8;
+      color: #000000;
     }
-    .btn-outline:hover { background: #ebf5fb; text-decoration: none; }
+    .btn-outline:hover { background: #e0ddd5; text-decoration: none; }
 
     .hero-card {
       background: var(--bg);
@@ -207,9 +229,9 @@
 
     .tag {
       font-size: 0.72rem;
-      background: #ebf5fb;
+      background: #e8e8e8;
       color: var(--petrol);
-      border: 1px solid #aed6f1;
+      border: 1px solid #aaaaaa;
       padding: 0.18rem 0.55rem;
       border-radius: 3px;
     }
@@ -336,15 +358,15 @@
     }
 
     .status-ongoing {
-      background: #eafaf1;
-      color: #1e8449;
-      border: 1px solid #a9dfbf;
+      background: #e8e8e8;
+      color: #333333;
+      border: 1px solid #aaaaaa;
     }
 
     .status-done {
-      background: #f2f3f4;
-      color: #626567;
-      border: 1px solid #cacfd2;
+      background: #e0e0e0;
+      color: #555555;
+      border: 1px solid #aaaaaa;
     }
 
     .research-card h3 {
@@ -513,19 +535,29 @@
       align-items: center;
       gap: 0.8rem;
       padding: 0.9rem 1.1rem;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
+      background: #d4d0c8;
+      border-radius: 0;
+      border-top:    2px solid #ffffff;
+      border-left:   2px solid #ffffff;
+      border-right:  2px solid #404040;
+      border-bottom: 2px solid #404040;
+      box-shadow: 1px 1px 0 #808080 inset, -1px -1px 0 #dfdfdf inset;
       font-size: 0.875rem;
       color: var(--text);
-      transition: border-color .2s, background .2s;
+      cursor: pointer;
     }
 
     .contact-link:hover {
-      border-color: var(--petrol-lt);
-      background: #ebf5fb;
-      color: var(--petrol);
+      background: #e8e8e8;
+      color: #000;
       text-decoration: none;
+    }
+
+    .contact-link:active {
+      border-top:    2px solid #808080;
+      border-left:   2px solid #808080;
+      border-right:  2px solid #ffffff;
+      border-bottom: 2px solid #ffffff;
     }
 
     .contact-link .icon { font-size: 1.1rem; }
@@ -545,13 +577,13 @@
     /* ─── Footer ─── */
     footer {
       background: var(--petrol-dk);
-      color: #a9c4d9;
+      color: #999999;
       text-align: center;
       padding: 2rem 5%;
       font-size: 0.8rem;
     }
 
-    footer a { color: #a9c4d9; }
+    footer a { color: #999999; }
 
     /* ─── Responsive ─── */
     @media (max-width: 768px) {
@@ -929,6 +961,13 @@
           <span>
             <span class="cl-label">ORCID</span>
             <span class="cl-val">0000-0001-8637-7340</span>
+          </span>
+        </a>
+        <a class="contact-link" href="mailto:pedropontoleite@gmail.com">
+          <span class="icon">✉️</span>
+          <span>
+            <span class="cl-label">E-mail</span>
+            <span class="cl-val">pedropontoleite@gmail.com</span>
           </span>
         </a>
         <a class="contact-link" href="https://github.com/pedrohpls-py" target="_blank" rel="noopener">
