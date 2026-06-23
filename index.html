@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedro Henrique Pereira Leite dos Santos — Geógrafo</title>
+  <meta name="description" content="Doutorando em Ordenamento Territorial pela UFF. Pesquisador em Geografia Urbana, Mercado Imobiliário e Financeirização do Espaço." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── Reset & Base ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --petrol:    #1a5276;
+      --petrol-dk: #154360;
+      --petrol-lt: #2e86c1;
+      --text:      #1c1c1c;
+      --text-sec:  #4a4a4a;
+      --text-muted:#7a7a7a;
+      --bg:        #f8f9fb;
+      --bg-alt:    #ffffff;
+      --border:    #d8dde6;
+      --accent:    #c0392b;
+      --radius:    6px;
+      --nav-h:     64px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    a { color: var(--petrol-lt); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    img { max-width: 100%; display: block; }
+
+    h1, h2, h3 { font-family: 'Merriweather', serif; line-height: 1.3; }
+
+    /* ─── Nav ─── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+    }
+
+    .nav-brand {
+      font-family: 'Merriweather', serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--petrol);
+      letter-spacing: 0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-sec);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--petrol);
+      text-decoration: none;
+    }
+
+    /* ─── Hero ─── */
+    #hero {
+      background: var(--bg-alt);
+      padding: 7rem 5% 5rem;
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 4rem;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--petrol-lt);
+      background: #ebf5fb;
+      border: 1px solid #aed6f1;
+      padding: 0.25rem 0.7rem;
+      border-radius: 3px;
+      margin-bottom: 1.2rem;
+    }
+
+    #hero h1 {
+      font-size: 2.4rem;
+      color: var(--petrol-dk);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--petrol-lt);
+      font-weight: 400;
+      font-style: italic;
+      font-family: 'Merriweather', serif;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-bio {
+      font-size: 0.95rem;
+      color: var(--text-sec);
+      max-width: 560px;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: var(--radius);
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: background .2s, color .2s;
+    }
+
+    .btn-primary {
+      background: var(--petrol);
+      color: #fff;
+      border: 1px solid var(--petrol);
+    }
+    .btn-primary:hover { background: var(--petrol-dk); color: #fff; text-decoration: none; }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--petrol);
+      border: 1px solid var(--petrol);
+    }
+    .btn-outline:hover { background: #ebf5fb; text-decoration: none; }
+
+    .hero-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.8rem;
+    }
+
+    .hero-card h3 {
+      font-size: 0.78rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      margin-bottom: 0.85rem;
+      font-size: 0.875rem;
+      color: var(--text-sec);
+    }
+
+    .info-row .icon {
+      font-size: 1rem;
+      margin-top: 0.05rem;
+      flex-shrink: 0;
+      width: 18px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+    }
+
+    .tag {
+      font-size: 0.72rem;
+      background: #ebf5fb;
+      color: var(--petrol);
+      border: 1px solid #aed6f1;
+      padding: 0.18rem 0.55rem;
+      border-radius: 3px;
+    }
+
+    /* ─── Sections ─── */
+    section { padding: 5rem 5%; max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--petrol-lt);
+      margin-bottom: 0.5rem;
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      color: var(--petrol-dk);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-rule {
+      width: 40px;
+      height: 3px;
+      background: var(--petrol-lt);
+      margin-bottom: 2.5rem;
+    }
+
+    /* Alternate bg */
+    .bg-alt-section { background: var(--bg-alt); }
+    .bg-alt-section section { margin: 0 auto; }
+
+    /* ─── Formação ─── */
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: var(--border);
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+    }
+
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -2.45rem;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--petrol-lt);
+      border: 2px solid var(--bg);
+      box-shadow: 0 0 0 2px var(--petrol-lt);
+    }
+
+    .tl-period {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+    }
+
+    .tl-title {
+      font-family: 'Merriweather', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--petrol-dk);
+      margin-bottom: 0.15rem;
+    }
+
+    .tl-inst {
+      font-size: 0.875rem;
+      color: var(--text-sec);
+      margin-bottom: 0.4rem;
+    }
+
+    .tl-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* ─── Pesquisa ─── */
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .research-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      border-top: 3px solid var(--petrol-lt);
+      transition: box-shadow .2s;
+    }
+
+    .research-card:hover { box-shadow: 0 4px 18px rgba(26,82,118,.1); }
+
+    .research-status {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.55rem;
+      border-radius: 3px;
+      margin-bottom: 0.8rem;
+    }
+
+    .status-ongoing {
+      background: #eafaf1;
+      color: #1e8449;
+      border: 1px solid #a9dfbf;
+    }
+
+    .status-done {
+      background: #f2f3f4;
+      color: #626567;
+      border: 1px solid #cacfd2;
+    }
+
+    .research-card h3 {
+      font-size: 0.97rem;
+      color: var(--petrol-dk);
+      margin-bottom: 0.6rem;
+    }
+
+    .research-card p {
+      font-size: 0.85rem;
+      color: var(--text-sec);
+    }
+
+    .research-card .funders {
+      margin-top: 0.9rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* ─── Publicações ─── */
+    .pub-list { display: flex; flex-direction: column; gap: 1.2rem; }
+
+    .pub-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.4rem;
+      border-left: 4px solid var(--petrol-lt);
+    }
+
+    .pub-type {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--petrol-lt);
+      margin-bottom: 0.3rem;
+    }
+
+    .pub-title {
+      font-family: 'Merriweather', serif;
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+
+    .pub-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ─── Mapas ─── */
+    .maps-intro {
+      font-size: 0.95rem;
+      color: var(--text-sec);
+      max-width: 640px;
+      margin-bottom: 2.5rem;
+    }
+
+    .maps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .map-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      cursor: pointer;
+      transition: box-shadow .2s, transform .2s;
+    }
+
+    .map-card:hover {
+      box-shadow: 0 6px 24px rgba(26,82,118,.15);
+      transform: translateY(-2px);
+    }
+
+    .map-thumb {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center top;
+      background: #e8edf3;
+    }
+
+    .map-info {
+      padding: 0.9rem 1rem;
+    }
+
+    .map-info h4 {
+      font-family: 'Merriweather', serif;
+      font-size: 0.87rem;
+      color: var(--petrol-dk);
+      margin-bottom: 0.25rem;
+    }
+
+    .map-info p {
+      font-size: 0.77rem;
+      color: var(--text-muted);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.88);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 2rem;
+    }
+    .lightbox.open { display: flex; }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 4px;
+      object-fit: contain;
+    }
+
+    .lightbox-caption {
+      color: #ccc;
+      font-size: 0.85rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      background: none;
+      border: none;
+      line-height: 1;
+    }
+
+    /* ─── Contato ─── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .contact-text p {
+      font-size: 0.95rem;
+      color: var(--text-sec);
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 0.9rem 1.1rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      color: var(--text);
+      transition: border-color .2s, background .2s;
+    }
+
+    .contact-link:hover {
+      border-color: var(--petrol-lt);
+      background: #ebf5fb;
+      color: var(--petrol);
+      text-decoration: none;
+    }
+
+    .contact-link .icon { font-size: 1.1rem; }
+
+    .contact-link .cl-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.1rem;
+    }
+
+    .contact-link .cl-val { font-weight: 500; }
+
+    /* ─── Footer ─── */
+    footer {
+      background: var(--petrol-dk);
+      color: #a9c4d9;
+      text-align: center;
+      padding: 2rem 5%;
+      font-size: 0.8rem;
+    }
+
+    footer a { color: #a9c4d9; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 768px) {
+      #hero { grid-template-columns: 1fr; padding: 4rem 5% 3rem; }
+      .hero-card { display: none; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      #hero h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── Nav ─── -->
+<nav>
+  <span class="nav-brand">Pedro H. P. L. Santos</span>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#formacao">Formação</a></li>
+    <li><a href="#pesquisa">Pesquisa</a></li>
+    <li><a href="#publicacoes">Publicações</a></li>
+    <li><a href="#mapas">Mapas</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</nav>
+
+<!-- ─── Hero ─── -->
+<div style="background: var(--bg-alt);">
+  <div id="sobre" style="display:grid; grid-template-columns: 1fr 380px; gap: 4rem; align-items: center; max-width: 1100px; margin: 0 auto; padding: 6rem 5% 5rem;">
+
+    <div>
+      <span class="hero-tag">Doutorando · UFF · Geografia</span>
+      <h1>Pedro Henrique<br>Pereira Leite dos Santos</h1>
+      <p class="hero-subtitle">Geografia Urbana &amp; Econômica · Mercado Imobiliário · Financeirização</p>
+      <p class="hero-bio">
+        Doutorando no Programa de Pós-Graduação em Ordenamento Territorial da Universidade Federal Fluminense (UFF). Mestre em Geografia com bolsa FAPERJ. Pesquisador no <abbr title="Núcleo de Pesquisa Sobre Pactos Político-Territoriais e Desenvolvimento">NUPACT-UFF</abbr> e colaborador do Observatório Nacional de Dinâmicas Imobiliárias e Fundiárias (ONDi). Ex-estagiário do IBGE e recenseador do Censo 2022. Investiga financeirização do espaço, vazios urbanos e mercado imobiliário no contexto do capitalismo contemporâneo.
+      </p>
+      <div class="hero-links">
+        <a class="btn btn-primary" href="http://lattes.cnpq.br/0832578151245096" target="_blank" rel="noopener">
+          📄 Currículo Lattes
+        </a>
+        <a class="btn btn-outline" href="https://orcid.org/0000-0001-8637-7340" target="_blank" rel="noopener">
+          🔗 ORCID
+        </a>
+        <a class="btn btn-outline" href="#mapas">🗺 Ver Mapas</a>
+      </div>
+    </div>
+
+    <aside class="hero-card">
+      <h3>Informações</h3>
+      <div class="info-row">
+        <span class="icon">🎓</span>
+        <span>Doutorando em Ordenamento Territorial · UFF, Niterói</span>
+      </div>
+      <div class="info-row">
+        <span class="icon">📍</span>
+        <span>Niterói / Rio de Janeiro, Brasil</span>
+      </div>
+      <div class="info-row">
+        <span class="icon">🔬</span>
+        <span>Orientador: Prof. Dr. Daniel de Mello Sanfelici</span>
+      </div>
+      <div class="info-row">
+        <span class="icon">🏛</span>
+        <span>NUPACT · ONDi · FinPlanet</span>
+      </div>
+      <div style="margin-top: 1.2rem; border-top: 1px solid var(--border); padding-top: 1rem;">
+        <div class="section-label" style="margin-bottom: 0.6rem;">Áreas de pesquisa</div>
+        <div class="tag-list">
+          <span class="tag">Geografia Urbana</span>
+          <span class="tag">Geografia Econômica</span>
+          <span class="tag">Mercado Imobiliário</span>
+          <span class="tag">Vazios Urbanos</span>
+          <span class="tag">Financeirização</span>
+          <span class="tag">Geoprocessamento</span>
+          <span class="tag">SIG / Cartografia</span>
+          <span class="tag">PIB Municipal</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- ─── Formação ─── -->
+<div style="background: var(--bg);">
+  <section id="formacao">
+    <div class="section-label">Trajetória</div>
+    <h2>Formação &amp; Experiência</h2>
+    <div class="section-rule"></div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+
+      <div>
+        <h3 style="font-size: 0.9rem; font-family: 'Inter', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-muted); margin-bottom: 1.5rem;">Formação Acadêmica</h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-period">2026 – atual</div>
+            <div class="tl-title">Doutorado em Ordenamento Territorial</div>
+            <div class="tl-inst">Universidade Federal Fluminense (UFF)</div>
+            <div class="tl-desc">Orient.: Prof. Dr. Daniel Sanfelici · Co-orient.: Prof.ª Dr.ª Mariana Traldi</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-period">2021 – 2024</div>
+            <div class="tl-title">Mestrado em Geografia</div>
+            <div class="tl-inst">Universidade Federal Fluminense (UFF) · Bolsista FAPERJ</div>
+            <div class="tl-desc">Dissertação: <em>Classificação e Qualificação de Vazios Urbanos: Subsídios a uma política do solo para a Região Norte de Niterói (RJ)</em></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-period">2016 – 2021</div>
+            <div class="tl-title">Licenciatura em Geografia</div>
+            <div class="tl-inst">Universidade Federal Fluminense (UFF)</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="font-size: 0.9rem; font-family: 'Inter', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-muted); margin-bottom: 1.5rem;">Experiência Profissional</h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-period">2023 – atual</div>
+            <div class="tl-title">Pesquisador · CNPq / UFF</div>
+            <div class="tl-inst">NUPACT · ONDi</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-period">2022 – 2023</div>
+            <div class="tl-title">Recenseador · IBGE</div>
+            <div class="tl-inst">Censo Demográfico 2022 · Niterói (RJ)</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-period">2021 – 2022</div>
+            <div class="tl-title">Bolsista Pesquisador · FEC/UFF</div>
+            <div class="tl-inst">Mapeamento geo-histórico do mercado imobiliário de Niterói</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-period">2019 – 2021</div>
+            <div class="tl-title">Estagiário · IBGE</div>
+            <div class="tl-inst">Gerência de Pesquisas Ambientais e Dinâmicas Territoriais</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-period">2019 – 2020</div>
+            <div class="tl-title">Professor Voluntário</div>
+            <div class="tl-inst">Pré-Vestibular Comunitário Oficina do Saber · UFF</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ─── Pesquisa ─── -->
+<div style="background: var(--bg-alt);">
+  <section id="pesquisa">
+    <div class="section-label">Projetos</div>
+    <h2>Pesquisa</h2>
+    <div class="section-rule"></div>
+    <div class="research-grid">
+
+      <div class="research-card">
+        <span class="research-status status-ongoing">Em andamento</span>
+        <h3>FinPlanet — Financeirização planetária insustentável</h3>
+        <p>Investigação sobre as conexões entre trajetórias de desenvolvimento territorial e a crise ambiental no capitalismo financeirizado. Comparação franco-brasileira envolvendo agronegócio, mineração, logística, turismo e energia eólica.</p>
+        <div class="funders">Financiadores: FAPESP · Agence Nationale de la Recherche (França)</div>
+      </div>
+
+      <div class="research-card">
+        <span class="research-status status-ongoing">Em andamento</span>
+        <h3>Gestão de Ativos no Brasil: geografia dos investimentos</h3>
+        <p>Crescimento do setor de gestão de ativos no Brasil, com foco em infraestrutura, imóveis e produtos sustentáveis. Mapeamento geográfico dos investimentos e seus impactos territoriais.</p>
+        <div class="funders">Financiador: FAPERJ</div>
+      </div>
+
+      <div class="research-card">
+        <span class="research-status status-ongoing">Em andamento</span>
+        <h3>ONDi — Observatório Nacional de Dinâmicas Imobiliárias e Fundiárias</h3>
+        <p>Rede nacional de pesquisadores para sistematização e disponibilização de dados gráficos e cartográficos sobre dinâmicas imobiliárias e fundiárias em cidades brasileiras de diferentes escalas.</p>
+      </div>
+
+      <div class="research-card">
+        <span class="research-status status-done">Concluído</span>
+        <h3>Mapeamento geo-histórico do mercado imobiliário de Niterói</h3>
+        <p>PDPA com suporte da Prefeitura de Niterói, UFF e Fundação Euclides da Cunha. Desenvolvimento de ferramenta cartográfica para gestão pública do solo urbano.</p>
+        <div class="funders">Financiador: Fundação Euclides da Cunha (FEC)</div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ─── Publicações ─── -->
+<div style="background: var(--bg);">
+  <section id="publicacoes">
+    <div class="section-label">Produção Científica</div>
+    <h2>Publicações</h2>
+    <div class="section-rule"></div>
+
+    <div class="pub-list">
+
+      <div class="pub-item">
+        <div class="pub-type">Artigo em periódico</div>
+        <div class="pub-title">Geoprocessamento aplicado ao estudo da dinâmica imobiliária: um estudo de caso sobre vazios urbanos na Região Norte de Niterói/RJ</div>
+        <div class="pub-meta">CARVALHO, R. M. R. ; SANTOS, P. H. P. L. ; SANFELICI, D. M. · <em>Revista Brasileira de Estudos Urbanos e Regionais</em>, v. 25, p. 1–27, 2023.</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-type">Produção técnica · Mapa (IBGE)</div>
+        <div class="pub-title">Estrutura de receitas e financiamento · Estrutura de despesas</div>
+        <div class="pub-meta">ARAUJO, M. L. D. ; SANTOS, P. H. P. L. · In: <em>Atlas do Espaço Rural Brasileiro</em>, 2. ed. Rio de Janeiro: IBGE, 2020. p. 256–291.</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-type">Trabalho em anais de congresso</div>
+        <div class="pub-title">Dinâmica Imobiliária de Niterói (RJ): possibilidades de análise a partir da Alameda São Boaventura</div>
+        <div class="pub-meta">GOMES, M. B. ; SANTOS, P. H. P. L. · <em>XIX Encontro Nacional da ANPUR</em>, Blumenau, SC, 2022.</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-type">Trabalho em anais de congresso</div>
+        <div class="pub-title">Expansão imobiliária no subúrbio carioca: um estudo de caso sobre a Avenida Dom Hélder Câmara</div>
+        <div class="pub-meta">SANTOS, P. H. P. L. · <em>I Semana Acadêmica de Geografia</em>, Niterói, RJ, 2019.</div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ─── Mapas ─── -->
+<div style="background: var(--bg-alt);">
+  <section id="mapas">
+    <div class="section-label">Portfólio Cartográfico</div>
+    <h2>Mapas &amp; Visualizações</h2>
+    <div class="section-rule"></div>
+    <p class="maps-intro">Seleção de produtos cartográficos produzidos ao longo de pesquisas sobre dinâmica imobiliária, morfologia urbana e análise territorial.</p>
+
+    <div class="maps-grid">
+
+      <div class="map-card" onclick="openLightbox('assets/Mapa02_Recorte_Espacial_Bairros-min.png', 'Recorte espacial — bairros da Região Norte de Niterói')">
+        <img class="map-thumb" src="assets/Mapa02_Recorte_Espacial_Bairros-min.png" alt="Recorte Espacial dos Bairros" loading="lazy" />
+        <div class="map-info">
+          <h4>Recorte espacial — bairros</h4>
+          <p>Região Norte de Niterói (RJ)</p>
+        </div>
+      </div>
+
+      <div class="map-card" onclick="openLightbox('assets/Mapa03_Infraestrutura-min.png', 'Infraestrutura — Região Norte de Niterói')">
+        <img class="map-thumb" src="assets/Mapa03_Infraestrutura-min.png" alt="Mapa de Infraestrutura" loading="lazy" />
+        <div class="map-info">
+          <h4>Infraestrutura urbana</h4>
+          <p>Região Norte de Niterói (RJ)</p>
+        </div>
+      </div>
+
+      <div class="map-card" onclick="openLightbox('assets/Mapa04_Evolucao_ManchaUrbana-min.png', 'Evolução da Mancha Urbana — Niterói')">
+        <img class="map-thumb" src="assets/Mapa04_Evolucao_ManchaUrbana-min.png" alt="Evolução da Mancha Urbana" loading="lazy" />
+        <div class="map-info">
+          <h4>Evolução da mancha urbana</h4>
+          <p>Análise temporal — Niterói (RJ)</p>
+        </div>
+      </div>
+
+      <div class="map-card" onclick="openLightbox('assets/Mapa07_IBGE_Renda_Bairro-min.png', 'Renda por bairro — dados IBGE — Niterói')">
+        <img class="map-thumb" src="assets/Mapa07_IBGE_Renda_Bairro-min.png" alt="Renda por Bairro IBGE" loading="lazy" />
+        <div class="map-info">
+          <h4>Renda por bairro (IBGE)</h4>
+          <p>Niterói (RJ)</p>
+        </div>
+      </div>
+
+      <div class="map-card" onclick="openLightbox('assets/Mapa09_IPTU_Bairro_estoqueQNT_Proporção-min.png', 'IPTU e estoque imobiliário por bairro — Niterói')">
+        <img class="map-thumb" src="assets/Mapa09_IPTU_Bairro_estoqueQNT_Proporção-min.png" alt="IPTU por Bairro" loading="lazy" />
+        <div class="map-info">
+          <h4>IPTU — estoque imobiliário</h4>
+          <p>Proporção por bairro — Niterói (RJ)</p>
+        </div>
+      </div>
+
+      <div class="map-card" onclick="openLightbox('assets/Mapa14_RN_Vazios_Desloc.png', 'Vazios urbanos e deslocamentos — Região Norte de Niterói')">
+        <img class="map-thumb" src="assets/Mapa14_RN_Vazios_Desloc.png" alt="Vazios Urbanos e Deslocamentos" loading="lazy" />
+        <div class="map-info">
+          <h4>Vazios urbanos e deslocamentos</h4>
+          <p>Região Norte de Niterói (RJ)</p>
+        </div>
+      </div>
+
+      <div class="map-card" onclick="openLightbox('assets/Mapa2_RN_ContextoBairros.png', 'Contexto dos bairros — Região Norte de Niterói')">
+        <img class="map-thumb" src="assets/Mapa2_RN_ContextoBairros.png" alt="Contexto dos Bairros" loading="lazy" />
+        <div class="map-info">
+          <h4>Contexto dos bairros</h4>
+          <p>Região Norte de Niterói (RJ)</p>
+        </div>
+      </div>
+
+      <div class="map-card" onclick="openLightbox('assets/Mapa2_Grabois_Niterói_4v.png', 'Grabois — Niterói')">
+        <img class="map-thumb" src="assets/Mapa2_Grabois_Niterói_4v.png" alt="Mapa Grabois Niterói" loading="lazy" />
+        <div class="map-info">
+          <h4>Análise territorial — Grabois</h4>
+          <p>Niterói (RJ)</p>
+        </div>
+      </div>
+
+      <div class="map-card" onclick="openLightbox('assets/Mapa Ciclovias Tijuca-min.png', 'Ciclovias — Tijuca, Rio de Janeiro')">
+        <img class="map-thumb" src="assets/Mapa Ciclovias Tijuca-min.png" alt="Ciclovias Tijuca" loading="lazy" />
+        <div class="map-info">
+          <h4>Ciclovias — Tijuca</h4>
+          <p>Rio de Janeiro (RJ)</p>
+        </div>
+      </div>
+
+      <div class="map-card" onclick="openLightbox('assets/MapaGeral_TopoRO-page-00001.jpg', 'Mapa geral topográfico — Rondônia (folha 1)')">
+        <img class="map-thumb" src="assets/MapaGeral_TopoRO-page-00001.jpg" alt="Mapa Topográfico RO 1" loading="lazy" />
+        <div class="map-info">
+          <h4>Mapa topográfico geral</h4>
+          <p>Rondônia — folha 1</p>
+        </div>
+      </div>
+
+      <div class="map-card" onclick="openLightbox('assets/MapaGeral_TopoRO-page-00002.jpg', 'Mapa geral topográfico — Rondônia (folha 2)')">
+        <img class="map-thumb" src="assets/MapaGeral_TopoRO-page-00002.jpg" alt="Mapa Topográfico RO 2" loading="lazy" />
+        <div class="map-info">
+          <h4>Mapa topográfico geral</h4>
+          <p>Rondônia — folha 2</p>
+        </div>
+      </div>
+
+      <div class="map-card" onclick="openLightbox('assets/Conexão entre as Gestoras de Ativos e os Ativos Verdes no Brasil.png', 'Rede de conexões entre gestoras de ativos e ativos verdes no Brasil')">
+        <img class="map-thumb" src="assets/Conexão entre as Gestoras de Ativos e os Ativos Verdes no Brasil.png" alt="Gestoras de Ativos e Ativos Verdes" loading="lazy" />
+        <div class="map-info">
+          <h4>Gestoras de ativos × ativos verdes</h4>
+          <p>Rede de conexões — Brasil</p>
+        </div>
+      </div>
+
+      <div class="map-card" onclick="openLightbox('assets/Quadro - Botafogo.png', 'Quadro analítico — Botafogo, Rio de Janeiro')">
+        <img class="map-thumb" src="assets/Quadro - Botafogo.png" alt="Quadro Botafogo" loading="lazy" />
+        <div class="map-info">
+          <h4>Quadro analítico — Botafogo</h4>
+          <p>Rio de Janeiro (RJ)</p>
+        </div>
+      </div>
+
+      <div class="map-card" onclick="openLightbox('assets/Quadros - Barreira do Vasco.png', 'Quadro analítico — Barreira do Vasco, Rio de Janeiro')">
+        <img class="map-thumb" src="assets/Quadros - Barreira do Vasco.png" alt="Quadros Barreira do Vasco" loading="lazy" />
+        <div class="map-info">
+          <h4>Quadro analítico — Barreira do Vasco</h4>
+          <p>Rio de Janeiro (RJ)</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ─── Contato ─── -->
+<div style="background: var(--bg);">
+  <section id="contato">
+    <div class="section-label">Contato</div>
+    <h2>Entre em contato</h2>
+    <div class="section-rule"></div>
+
+    <div class="contact-grid">
+      <div class="contact-text">
+        <p>Doutorando no Programa de Pós-Graduação em Ordenamento Territorial da UFF. Aberto a colaborações em pesquisa, revisão de trabalhos e projetos envolvendo cartografia, mercado imobiliário e geografia econômica.</p>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Última atualização do currículo Lattes: 17/06/2026.</p>
+      </div>
+      <div class="contact-links">
+        <a class="contact-link" href="http://lattes.cnpq.br/0832578151245096" target="_blank" rel="noopener">
+          <span class="icon">📄</span>
+          <span>
+            <span class="cl-label">Currículo Lattes</span>
+            <span class="cl-val">lattes.cnpq.br/0832578151245096</span>
+          </span>
+        </a>
+        <a class="contact-link" href="https://orcid.org/0000-0001-8637-7340" target="_blank" rel="noopener">
+          <span class="icon">🔗</span>
+          <span>
+            <span class="cl-label">ORCID</span>
+            <span class="cl-val">0000-0001-8637-7340</span>
+          </span>
+        </a>
+        <a class="contact-link" href="https://github.com/pedrohpls-py" target="_blank" rel="noopener">
+          <span class="icon">💻</span>
+          <span>
+            <span class="cl-label">GitHub</span>
+            <span class="cl-val">pedrohpls-py</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ─── Footer ─── -->
+<footer>
+  <p>Pedro Henrique Pereira Leite dos Santos · Doutorando em Ordenamento Territorial · UFF</p>
+  <p style="margin-top: 0.4rem; font-size: 0.72rem; opacity: 0.7;">
+    <a href="http://lattes.cnpq.br/0832578151245096">Lattes</a> ·
+    <a href="https://orcid.org/0000-0001-8637-7340">ORCID</a> ·
+    <a href="https://github.com/pedrohpls-py">GitHub</a>
+  </p>
+</footer>
+
+<!-- ─── Lightbox ─── -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img id="lb-img" src="" alt="" onclick="event.stopPropagation()" />
+  <p class="lightbox-caption" id="lb-caption"></p>
+</div>
+
+<script>
+  function openLightbox(src, caption) {
+    document.getElementById('lb-img').src = src;
+    document.getElementById('lb-caption').textContent = caption;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+
+</body>
+</html>
